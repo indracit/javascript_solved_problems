@@ -1,10 +1,10 @@
 ---
-title: "Java script DOM Cheat sheet"
+title: "JavaScript DOM Cheat sheet"
 seoTitle: "content"
 seoDescription: "javascript DOM"
 datePublished: Thu Jul 13 2023 06:38:57 GMT+0000 (Coordinated Universal Time)
 cuid: clk0s4mhe00120amk5a05a5pu
-slug: java-script-dom-cheat-sheet
+slug: javascript-dom-cheat-sheet
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1689230214587/5feb8ca0-ddf5-4ba7-96c2-3aa11f57f23f.png
 tags: javascript, nodejs, dom, reactjs
 
