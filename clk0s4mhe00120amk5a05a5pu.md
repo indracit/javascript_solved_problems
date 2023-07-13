@@ -1,6 +1,6 @@
 ---
 title: "JavaScript DOM Cheat sheet"
-seoTitle: "content"
+seoTitle: "javascript dom cheatsheet"
 seoDescription: "javascript DOM"
 datePublished: Thu Jul 13 2023 06:38:57 GMT+0000 (Coordinated Universal Time)
 cuid: clk0s4mhe00120amk5a05a5pu
