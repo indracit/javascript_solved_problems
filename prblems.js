@@ -372,4 +372,24 @@ console.log(checkPalindrome(str))
 // Given an array of strings, find the most frequent word in a given array, I mean, the string that appears the most in the array. In the case of a tie, ​the string that is the smallest (lexicographically) ​is printed. 
 
 
+var arr = ['java','python','javascript','node','react','javascript','node'];
 
+const findDuplicates = (arr) => {
+    
+    const result = {};
+    
+    arr.forEach((elem) =>{
+        if(elem in result){
+            // console.log(elem)
+            result[elem] = ++result[elem];
+        }
+        else {
+            result[elem] = 1;
+        }
+        
+    })
+    
+    return result;
+}
+
+console.log(findDuplicates(arr));
