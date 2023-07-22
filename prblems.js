@@ -331,6 +331,44 @@ console.log(checkMaxLength(str));
 
 // Given string str, How do you find the longest palindromic substring in str?
 
+	
+	var str = 'babad';
+
+
+const reverse = ( str) => {
+    if(str.length < 2) return str;
+    
+    return reverse(str.slice(1,str.length)) + str.charAt(0)
+}
+
+const checkPalindrome = (str) => {
+    
+    let arr = []
+    for ( let i = 0; i < str.length ; i++){
+        
+        let substring = str.slice(i,str.length);
+        // console.log('substring- '+substring)
+        
+        for( let j = substring.length   ; j >=0  ; j--){
+            
+            // console.log('j - '+ j)
+          let substr = substring.slice(0 , j);
+          let reversed = reverse(substr);
+        //   console.log( substr);
+           if(substr.length > 1){
+               if(substr === reversed){
+                 arr.push(substr)
+            } 
+           }
+            }
+        
+    }
+    
+    return arr;
+    
+}
+console.log(checkPalindrome(str))
+
 // Given an array of strings, find the most frequent word in a given array, I mean, the string that appears the most in the array. In the case of a tie, ​the string that is the smallest (lexicographically) ​is printed. 
 
 
