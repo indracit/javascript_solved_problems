@@ -194,22 +194,142 @@ const countChar = (char,str) =>{
 console.log(countChar(char,str))
 
 // How do you print the first non-repeated character from a string?
+	
+	var str = "Programming";
+
+const findDuplicates = (str) => {
+    
+    const result = {};
+    let strArr = str.split('');
+    
+    strArr.forEach((elem) =>{
+        if(elem in result){
+            // console.log(elem)
+            result[elem] = ++result[elem];
+        }
+        else {
+            result[elem] = 1;
+        }
+        
+    })
+        
+    for(elem in result){
+        if(result[elem]===1){
+            return elem;
+        }
+    }
+    
+}
+
+console.log(findDuplicates(str));
 
 // How do you reverse words in a given sentence without using any library method? 
+	
+	var str = "Hello world how are you";
+
+const reverseWords = (str) => {
+    
+    let arr = str.split(' ');
+    
+    console.log(arr);
+    
+    let i = 0;
+    let j = arr.length-1;
+    
+    for(i ; i < j ; i++){
+        
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        j--;
+    }
+    
+    return arr.join(' ')
+   
+}
+
+console.log(reverseWords(str));
 
 // How do you check if two strings are a rotation of each other?
+	
+var str1 = 'IndiaVsEngland';
+var str2 = 'EnglandIndiaVs'
+
+
+
+const checkRotation = (str1,str2) =>{
+    
+    if(str1.length !== str2.length){
+        return false
+    }
+    
+    let conc = str1+str1;
+    // console.log(conc)
+    if (conc.indexOf(str2) != -1) {
+        return true }
+    
+    return false; 
+
+}
+
+console.log(checkRotation(str1,str2))
 
 // How do you check if a given string is a palindrome?
 
+var str = 'malayalam';
+
+
+const reverse = (str) => {
+    
+    if(str.length < 2) return  str;
+    
+    let reversed = str.charAt(str.length-1) + reverse(str.slice(0,str.length - 1))
+    
+    return reversed;
+    
+}
+
+const checkPalindrome = (str) =>{
+    
+    let reversed = reverse(str);
+    
+    console.log(reversed);
+    
+    return str === reversed;
+   
+}
+
+console.log(checkPalindrome(str))
+
 // How do you find the length of the longest substring without repeating characters?
 
+var str = 'abcabcbb';
+
+const checkMaxLength = (str) => {
+    
+    let charset = new Set();
+    let max = 0;
+    let left = 0;
+    
+    for(let right = 0; right < str.length; right++){
+        
+        while(charset.has(str[right])){
+            charset.delete(str[right]);
+            left++;
+        }
+        
+        charset.add(str[right]);
+        
+        max = Math.max(max,right-left + 1);
+    }
+    
+    return max;
+}
+
+
+console.log(checkMaxLength(str));
+
 // Given string str, How do you find the longest palindromic substring in str?
-
-// how to remove the duplicate character from String?
-
-// How to find the maximum occurring character in given String? 
-
-// How do you remove a given character from String? 
 
 // Given an array of strings, find the most frequent word in a given array, I mean, the string that appears the most in the array. In the case of a tie, ​the string that is the smallest (lexicographically) ​is printed. 
 
